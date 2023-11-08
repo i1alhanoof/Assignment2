@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m-4">
+        <form action="submit-index.html" onsubmit="return formValidation()">
+
+            <!-- for create username form -->
+            <div class="username-container mb-4">
+                <label for="usernameText" class="form-label">Username</label>
+                <input type="text" id="usernameText" placeholder="Enter Username" class="form-control">
+                <div id="usernameHelp" class="form-text">Your username must be 8-20 characters long and contains letters
+                    only.</div>
+                <span id="usernameError"></span>
+            </div>
+
+            <!-- for create password form -->
+            <div class="possware-container mb-4">
+                <label for="passwordText" class="form-label">Password</label>
+                <input type="password" id="passwordText" placeholder="Enter Password" class="form-control">
+                <div id="passwordHelp" class="form-text">Your password must be 8-20 characters long, contain letters and
+                    numbers, and must not contain spaces, special characters, or emoji.</div>
+                <span id="passwordError"></span>
+            </div>
+
+            <!-- for create confirm password form -->
+            <div class="confirm-possware-container mb-4">
+                <label for="confirmPasswordText" class="form-label">Confirm Password</label>
+                <input type="password" id="confirmPasswordText" placeholder="Confirm Password" class="form-control">
+                <span id="confirmPasswordError"></span>
+            </div>
+
+            <!-- for create email form -->
+            <div class="email-container mb-4">
+                <label for="emailText" class="form-label">Email</label>
+                <input type="text" id="emailText" placeholder="Enter Email" class="form-control">
+                <span id="emailError"></span>
+            </div>
+
+            <!-- for create gender form -->
+            <div class="gender-container mb-4">
+                <p class="form-label">Gender</p>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="maleRadio" name="gender" class="form-check-input">
+                    <label for="maleRadio" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="femaleRadio" name="gender" class="form-check-input">
+                    <label for="femaleRadio" class="form-check-label">Female</label>
+                </div>
+            </div>
+
+            <!-- for create city form -->
+            <div class="city-container mb-4">
+                <label for="cityDropdown" class="form-label">City</label>
+                <select id="cityDropdown" class="form-select">
+                    <option value="" selected>Select City</option>
+                    <option value="c1">Riyadh</option>
+                    <option value="c2">Jeddah</option>
+                    <option value="c3">Mecca</option>
+                    <option value="c4">Medina</option>
+                    <option value="c5">Dammam</option>
+                    <option value="c6">Al-Mubarraz</option>
+                    <option value="c7">Taif</option>
+                    <option value="c8">Tabuk</option>
+                    <option value="c9">Buraydah</option>
+                    <option value="c10">Jubail</option>
+                    <option value="c11">Sakaka</option>
+                    <option value="c12">Arar</option>
+                </select>
+            </div>
+
+            <!-- for create province form -->
+            <div class="province-container mb-4">
+                <label for="provinceDropdown" class="form-label">Province</label>
+                <select id="provinceDropdown" class="form-select">
+                    <option value="" selected>Select Province</option>
+                    <option value="p1">Mecca Province</option>
+                    <option value="p2">Riyadh Province</option>
+                    <option value="p3">Eastern Province</option>
+                    <option value="p4">Asir Province</option>
+                    <option value="p5">Jazan Province</option>
+                    <option value="p6">Medina Province</option>
+                    <option value="p7">Al-Qassim Province</option>
+                    <option value="p8">Tabuk Province</option>
+                    <option value="p9">Ḥa'il Province</option>
+                    <option value="p10">Najran Province</option>
+                    <option value="p11">Al-Jawf Province</option>
+                    <option value="p12">Al-Bahah Province</option>
+                    <option value="p13">Northern Borders Province</option>
+                </select>
+            </div>
+
+            <!-- for create register form -->
+            <div class="register-container">
+                <input type="submit" value="Register" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
